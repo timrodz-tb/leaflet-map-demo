@@ -1,11 +1,11 @@
 import type { LatLngTuple } from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
-const position: LatLngTuple = [51.505, -0.09,]
+const position: LatLngTuple = [51.505, -0.09];
 
 export function OpenMapDemo() {
   return (
-    <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+    <MapContainer center={position} zoom={1} scrollWheelZoom={false}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -17,9 +17,11 @@ export function OpenMapDemo() {
       </Marker>
       <Marker position={[51.508, -0.08]}>
         <Popup>
-          <button onClick={() => console.log("button clicked")}>Click me</button>
+          <button onClick={() => console.log("button clicked")}>
+            Click me
+          </button>
         </Popup>
       </Marker>
     </MapContainer>
-  )
+  );
 }

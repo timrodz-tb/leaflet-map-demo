@@ -1,3 +1,14 @@
 .leaflet-container {
-  height: 400px;
+  height: 80vh;
+
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(4px);
+}
+
+.blur {
+  background: url('/amaala_background.png');
+}
+
+p {
+  font-size: 1.75rem;
 }
